@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.3 ),rgba(0,0,0,0.3)), url(./bac.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-size: 100% 100%;
+    display: grid;
+    place-items: center;
+}
+.co{
+    background-color: rgb(12,43,34,0.701);
+    height: 420px;
+    width: 400px;
+    
+}
+#pca{
+    background-color: rgb(41,85,89);
+    padding: 26px 14px;
+    margin:8px; 
+    width: 383px;
+    height: 25px;
+    border-style: none;
+    font-size:19px ;
+    margin-bottom: 34px;
+}
+#pca:hover{
+    border-style: none;
+    border-color: darkslategray;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+button{
+    width:60px;
+    padding: 6px;
+     margin: 8px;
+   background-color: rgb(41,85,89);
+   border: none;
+   border-radius: 5px;
+   
+   
+}
+#rr button{
+    width: 140px;
+    background-color: rgb(41,85,89);
+}
+
+/* media query */
+@media screen and (max-width: 480px) {
+    
+
+    .co{
+        width: 300px;
+        margin-top: 20px;
+        height: 430px;
+        margin-bottom: 30px;
+        margin: auto;
+       
+    }
+    button{
+        margin-top: 10px;
+        width: 41px;
+        padding: 8px;     
+    }
+    #pca{
+        width: 287px;      
+      margin:10px auto 20px 6px;
+    }
+    #rr button{
+        width: 100px;
+    }
+  }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<div class="co">
+    <form name="cal">
+        <input type="text" placeholder="" id="pca" name="display">
+        <table style="margin: auto;">
+            <tr>
+                <td> <button type="button" value="7" onclick="cal.display.value +='7'">7 </button></td>
+                <td> <button type="button" value="8" onclick="cal.display.value +='8'"> 8 </button></td>
+                <td> <button type="button" value="9" onclick="cal.display.value +='9'"> 9 </button> </td>
+                <td> <button id="un" type="button" onclick="Bksp()"><i class="material-icons " style="font-size: 12px;">&#xe166;</i>
+                    </button></td>
+            </tr>
+
+            <tr>
+                <td> <button type="button" value="4" onclick="cal.display.value +='4'"> 4 </button></td>
+                <td> <button type="button" value="5" onclick="cal.display.value +='5'"> 5 </button></td>
+                <td> <button type="button" value="6" onclick="cal.display.value +='6'"> 6 </button></td>
+                <td> <button type="button" value="C" onclick="cal.display.value =''"> C </button></td>
+            </tr>
+
+            <tr>
+
+                <td> <button type="button" value="1" onclick="cal.display.value +='1'"> 1 </button></td>
+                <td> <button type="button" value="2" onclick="cal.display.value +='2'"> 2 </button></td>
+                <td> <button type="button" value="3" onclick="cal.display.value +='3'"> 3 </button></td>
+                <td> <button type="button" value="-" onclick="cal.display.value +='-'"> - </button></td>
+            </tr>
+            <tr>
+                <td> <button type="button" value="0" onclick="cal.display.value +='0'"> 0 </button></td>
+                <td> <button style="font-size: 15px; font-weight: 700;" type="button" value="." onclick="cal.display.value +='.'"> . </button></td>
+                <td> <button type="button" value="%" onclick="per()"> % </button></td>
+                <td> <button type="button" value="+" onclick="cal.display.value +='+'"> + </button></td>
+
+            </tr>
+            <tr>
+                <td> <button type="button" value="(" onclick="cal.display.value +='('"> ( </button></td>
+                <td> <button type="button" value=")" onclick="cal.display.value +=')'"> ) </button></td>
+                <td> <button type="button" value="/" onclick="cal.display.value +='/'"> / </button></td>
+                <td> <button style="font-weight: bold;" type="button" value="*" onclick="cal.display.value +='*'"> * </button></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button" value="&#8730" onclick= "squr()"><i class="fas fa-square-root">&#8730;</i></button>
+                </td>
+                <td>
+                    <button type="button" value="&#178" onclick= "squre()" >x<sup>2</sup></button>
+                </td>
+                <td colspan="2" id="rr"> <button type="button" value="=" onclick="cal.display.value = eval(cal.display.value)">=</button></td>
+
+            </tr>
+
+
+        </table>
+    </form>
+
+</div>
+
+
+<!-- javascript -->
+
+<script>
+ function Bksp(){
+    var str =  document.cal.display.value;
+    document.cal.display.value = str.slice(0, -1); 
+}
+function squr(){
+    document.cal.display.value = Math.pow( document.cal.display.value,1/2)
+}
+function squre(){
+    document.cal.display.value = Math.pow( document.cal.display.value,2)
+}
+function per(){
+    document.cal.display.value = ( document.cal.display.value/100)  
+}
+</script>
+
+</div>
+</body>
+</html>
